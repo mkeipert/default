@@ -1,0 +1,36 @@
+.cookie-message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $lightPrimaryColor;
+  padding: $defaultMargin;
+  border-top: 1px solid $baseColor;
+
+   * {
+        color: $white;
+      }
+
+  @media screen and (min-width: $widthMedium) {
+   
+  p {
+    max-width: 1200px;
+    padding: 0 $defaultMargin;
+    margin: $defaultMargin auto;
+  }
+
+  .cookie-close {
+    padding: $defaultMargin;
+    margin: $defaultMargin 0;
+    display: inline-block;
+    border: 1px solid $white;
+    width: auto;
+
+    &:hover, &:focus, &:active {
+      background: $primaryColor;
+      color: white;
+    }
+  }
+}
+
+  }

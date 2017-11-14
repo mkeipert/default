@@ -1,0 +1,13 @@
+.candy-wrapper {position:relative;}
+.wrap {margin:0 auto;display:inline;top:0;z-index:0;vertical-align:top;}
+.sticky .wrap  {position:fixed;/*position:-webkit-sticky;*/display:block;}
+.sticky .wrap aside {width:100% !important; }
+.at-bottom .wrap  {position:fixed;bottom:400px;top:inherit;}
+.sticky .sidebar {}
+.sticky-stop {clear:both;}
+@media (max-width: 43.75em) {  .main, .wrap, .sticky .wrap, .at-bottom .wrap, .sidebar {width:100%;display:block;position:static;}
+  .sticky .sidebar {margin-left:0;}
+}
+
+
+@media (max-width: $widthMedium) { .main {width: 90%; } .home .main {width: 100%;}}

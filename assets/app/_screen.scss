@@ -1,0 +1,159 @@
+html, body, #page {
+	height: 100%;
+}
+
+#page {
+
+	#barwrap {
+		overflow: hidden;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		content: '';
+		height: $defaultMargin;
+
+		#bar {
+			height: $defaultMargin;
+			display: block;
+			position: absolute;
+			content: ' ';
+			width: 100%;
+			right: 0em;
+			top: 0em;
+			height: $defaultMargin * 5;
+			background: $primaryColor;
+
+			&:before {
+				width: 30px;
+				height: $defaultMargin;
+				content: '';
+				display: block;
+				background: $primaryColor;
+				-webkit-transform: rotate(110deg);
+				-ms-transform: rotate(110deg);
+				transform: rotate(110deg);
+				position: absolute;
+				left: -10px;
+			}
+		}
+	}
+}
+
+#header {
+	width: 100%;
+}
+#banner {
+	width: 100%;
+	overflow: hidden;
+	padding: $defaultMargin * 2 0 0 0;
+	
+	.home & {
+		background: $primaryColor;
+		height: 100%;
+
+		@media screen and (min-width: $widthSmall) {
+			height: auto;
+			background: $baseColor;
+		}
+	}
+	.container {
+		padding: 0 $defaultMargin;
+		overflow: visible;
+
+		img {
+			margin-left: -250px;
+		}
+	}
+
+	img {
+		height: 300px;
+		width: auto;
+	}
+
+	.default &, .contact & {
+		background: #dcecfb;
+		color: $lightPrimaryColor;
+		padding: $defaultMargin * 3 $defaultMargin $defaultMargin $defaultMargin;
+
+		@media screen and (min-width: $widthLarge) {
+			min-height: 300px;
+		}
+
+	}
+
+}
+
+main {
+	
+	padding-top: $defaultMargin;
+	
+	article {
+		margin-bottom: $defaultMargin *4;
+	}
+
+	.cta {
+
+		p {
+			font-weight: bold;
+			color: $primaryColor;
+			line-height: 1;
+			margin-bottom: 0;
+
+			&:first-child {
+				color: $white;
+
+			}
+		} 
+
+		.cta {
+			@include shadow(6px, 6px, 2px, lighten($baseColor, 20%));
+		}
+	}
+	
+	.item {
+		border-top: 2px solid $primaryColor;
+		padding: $defaultMargin;
+	}
+
+}
+
+footer {
+	background: $baseColor;
+	color: $white;
+	padding: $defaultMargin 0;
+	font-size: $defaultFontSize * 0.8;
+	* {
+		color: white !important;
+	}
+}
+
+
+#mobile-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	padding: $defaultMargin;
+	background: $white;
+	height: $defaultMargin * 4;
+	#logo {
+		width: 150px;
+		display: block;
+	}
+	#menu-open-button {
+		position: absolute;
+		top: $defaultMargin / 4;
+		right: $defaultMargin;
+		font-size: $defaultFontSize * 2;
+	}
+	#menu-close-button {
+		position: absolute;
+		top: $defaultMargin / 4;
+		right: $defaultMargin;
+		font-size: $defaultFontSize * 2;
+		display: none;
+	}
+}
+

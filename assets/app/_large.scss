@@ -1,0 +1,41 @@
+@media screen and (min-width: $widthLarge) {
+
+	#banner {
+
+		p {
+
+			width: 50%;
+			max-width: 750px;
+
+		}
+
+		.default &, .contact & {
+
+			background: url(../images/banner-bg.jpg) no-repeat top right -400px #dcecfb;
+
+		}
+	}
+
+}
+
+@media screen and (min-width: 1300px) {
+
+	main {
+
+		#bigblue {
+			background:	url(../images/fm-control-branchen.jpg) no-repeat top right #dcecfb;
+
+			.col {
+				float: left;
+				width: 50%;
+			
+				ul {
+					-webkit-column-count: 1;
+					-moz-column-count: 1;
+					column-count: 1;
+				}
+			}
+		}
+
+	}
+}

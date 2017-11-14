@@ -1,0 +1,203 @@
+h1 {
+	font-size: $defaultFontSize * 1.5;
+  font-weight: 600;
+  font-family: $secondaryFontFamily;
+  margin: 0;
+  line-height: $defaultLineHeight;
+
+  &.mobile-header {
+    position: fixed;
+    left: $defaultMargin;
+    color: $white;
+    font-size: $defaultFontSize;
+    line-height: $defaultMargin * 2;
+  }
+
+  .home #banner & {
+
+    color: $white;
+    margin-top: $defaultMargin * 3;
+
+    @media screen and (min-width: $widthSmall) {
+
+      margin-top: 0;
+      width: 500px;
+      line-height: 1;
+      text-align: right;
+      font-size: $defaultFontSize * 3.5;
+      position: absolute;
+      top: $defaultMargin * 3;
+      right: $defaultMargin;
+      text-transform: uppercase;
+        
+    }
+
+  }
+
+  .default #banner & {
+
+    color: $primaryColor;
+    font-weight: bold;
+    line-height: $defaultLineHeight;
+    margin: $defaultMargin 0;
+
+    @media screen and (min-width: $widthMedium) {
+
+      max-width: 600px;
+      font-size: $defaultFontSize * 1.6;
+      text-transform: uppercase;
+        
+    }
+  }
+}
+
+
+h2 {
+  font-size: $defaultFontSize * 1.2;
+  color: $primaryColor;
+  margin: 0 0 $defaultMargin 0;
+  line-height: $defaultLineHeight;
+  font-weight: bold;
+
+  #banner & {
+
+    color: white;
+    margin: 0;
+    font-weight: normal;
+    font-size: $defaultFontSize;
+
+    @media screen and (min-width: $widthSmall) {
+
+      font-size: $defaultFontSize * 2;
+      position: absolute;
+      bottom: $defaultMargin * 3;
+      right: $defaultMargin;
+
+    }
+
+  }
+
+  .box & {
+    font-size: $defaultMargin * 1.3;
+  }
+
+  #bigblue & {
+
+    font-size: $defaultFontSize * 2;
+    margin-top: $defaultMargin;
+  }
+
+
+}
+
+h3 {
+  font-size: $defaultFontSize;
+  color: $primaryColor;
+  margin-bottom: $defaultMargin;
+
+  .contact-item & {
+    margin-bottom: 0;
+  }
+}
+
+h4 {
+  @extend h1;
+  font-size: $defaultFontSize;
+  margin: $defaultMargin 0;
+  color: $primaryColor;
+}
+
+p {
+  margin-bottom: $defaultMargin;
+  line-height: $defaultLineHeight;
+
+  .intro & {
+
+    &:nth-of-type(1) {
+
+      color: $lightPrimaryColor;
+      font-size: $defaultFontSize * 1.2;
+
+    }
+
+  }
+
+  #banner & {
+
+      color: $lightPrimaryColor;
+      line-height: $defaultLineHeight;
+      position: relative;
+      margin: $defaultMargin 0;
+
+      @media screen and (min-width: $widthLarge) {
+
+        max-width: 450px;
+        font-size: $defaultFontSize * 1.2;
+        line-height: $defaultLineHeight;
+      
+      }
+
+  }
+
+}
+
+main {
+
+  ul {
+
+    margin-bottom: $defaultMargin;
+
+    li {
+
+      list-style-type: disc;
+      list-style-position: outside;
+      margin-left: 30px;
+      line-height: $defaultLineHeight;
+
+      &.contact-item-wrap  {
+
+        list-style-type: none;
+        margin-left: 0;
+      }
+
+    }
+  }
+
+  ol {
+
+    margin-bottom: $defaultMargin;
+
+    li {
+
+      list-style-position: outside;
+      list-style-type: decimal;
+      margin-left: 20px;
+      line-height: $defaultLineHeight;
+    }
+  }
+
+  > p {
+
+    color: $primaryColor;
+
+    strong {
+
+      color: $primaryColor;
+    }
+
+
+  }
+
+}
+
+em {
+      color: $lightPrimaryColor;
+      font-style: normal;
+    }
+
+figcaption {
+  font-size: $defaultFontSize * 0.8;
+  line-height: $defaultLineHeight * 2;
+  
+}
+

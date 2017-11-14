@@ -1,0 +1,27 @@
+$widthSmall:		480px;
+$widthMedium:		768px;
+$widthMediumPlus: 	1024px;
+$widthLarge:		1140px;
+
+$baseColor: 		#98979c;
+$darkBaseColor: 	#676767;
+$lightBaseColor:	#e8e8e8;
+$primaryColor: 		#003c76;
+$lightPrimaryColor:	#66a4d0;
+$secondaryColor:	#88c3ec;
+$lightSecondaryColor: #116EA9;
+$linkColor: 		$primaryColor;
+$linkHoverColor:	lighten($linkColor, 20%);
+$white: 			white;
+$backgroundColor:	$white;
+
+$defaultFontSize:	18px;
+$defaultLineHeight:	1.4em;
+$defaultFontFamily: 'Source Sans Pro', sans-serif;
+$secondaryFontFamily: 'Source Sans Pro', sans-serif;
+$defaultLetterSpacing: 0em;
+$defaultMargin: 	1rem;
+$defaultWidth: 		1200px;
+
+$button-size: 		2rem;
+$transition:		.5s;

@@ -1,0 +1,7 @@
+Title: Acme Hosting
+----
+Redirects:
+
+-
+  from: some/path
+  to: company/philosophy

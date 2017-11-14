@@ -1,0 +1,308 @@
+#navwrap {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: $primaryColor;
+	padding: $defaultMargin / 4;
+	min-height: $defaultMargin * 2.5;
+}
+
+.skip {
+	background: #363636;
+	width: $defaultMargin * 2.5;
+	height: $defaultMargin * 2.5;
+	position: absolute;
+	right: $defaultMargin;
+
+	.lines-button {
+	  	display: inline-block;
+	  	transition: .3s;
+	  	cursor: pointer;
+	  	user-select: none;
+	  	border-radius: $button-size/7;
+	  	background: none;
+	  	border: none;
+	 
+	  	&:hover {
+	    	opacity: 1;
+	  	}
+	 
+	  	&:active {
+	    	transition: 0;
+	    	background: $primaryColor;
+	  	}
+	}
+
+	.lines {
+   
+  		@include line;
+  		position: relative; 
+ 
+		&:before, &:after {
+   
+	   		@include line;
+	    	position: absolute;
+	      	left:0;
+	    	content: '';
+	    	transform-origin: $button-size/14 center;
+	  	}
+	  
+	  	&:before { top: $button-size/4; }
+	  	&:after { top: -$button-size/4; }
+	
+	}
+
+	.lines-button.x.close .lines{
+ 
+    	background: transparent;
+ 
+    	&:before, &:after{
+	      transform-origin: 50% 50%;
+	      top:0;
+	      width: $button-size;
+	    }
+ 
+	    &:before{
+	      transform: rotate3d(0,0,1,45deg); 
+	    }
+	    &:after{
+	      transform: rotate3d(0,0,1,-45deg); 
+	    }
+	}
+
+}
+
+nav#header_nav {
+
+	max-height: 0;
+	overflow: hidden;
+	transition: all .5s ease-out;
+	
+	&.open {
+		max-height: 100em;
+		background: $primaryColor;
+	}
+
+	ul {
+
+		margin-top: $defaultMargin * 2;
+		
+		li {
+
+			width: 100%;
+			text-align: center;
+
+			a:link, a:visited {
+
+				display: block;
+				color: $white;
+				padding: $defaultMargin / 4;
+			}
+
+			a:hover, a:focus, a:active {
+
+				background: $white;
+				color: $primaryColor;
+			}
+
+
+		}
+
+		&#add_menu {
+
+			text-align: center;
+			margin-top: $defaultMargin;
+			border-top: 1px solid $white;
+			padding-top: $defaultMargin / 2;
+			font-size: $defaultFontSize * 0.6;
+			text-transform: uppercase;
+			
+			li {
+
+				display: inline-block;
+				width: 30%;
+
+				&.lang {
+					display: none;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+@media screen and (min-width: $widthMediumPlus) {
+
+	header {
+
+		@include transition(all,1s);
+
+		#navwrap {
+			
+			position: inherit;
+			background: inherit;
+			padding: 0;
+			height: 100%;
+			min-height: 0;
+			float: right;
+			max-width: 800px;
+		}
+
+
+		#header_nav {
+
+			overflow: auto;
+			max-height: inherit;
+
+
+			ul {
+
+				margin-top: 0;
+				
+				&#main_menu {
+
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+
+				&#add_menu {
+					text-align: right;
+					font-size: $defaultFontSize * 0.9;
+					text-transform: none;
+					margin: 0;
+					padding: 0;
+
+					li {
+
+						border-left: 1px solid $primaryColor;
+						width: inherit;
+	
+						a:link, a:visited {
+
+							color: $primaryColor;
+							padding: 0 $defaultMargin * 0.3 0 $defaultMargin / 2;
+							font-size: $defaultFontSize * 0.8;
+							line-height: 1;
+
+						}
+
+						a:hover,a:focus, a:active {
+							background: none;
+						}
+
+						&.lang {
+							text-transform: uppercase;
+							border: none;
+							width: inherit;
+							display: inline-block;
+						}	
+
+						&:first-child {
+
+							border: none;
+
+						}
+
+						&:nth-child(4) {
+							margin-right: $defaultMargin;
+						}
+						
+						&:last-child {
+							border-left: 1px solid $primaryColor;
+						}
+
+					}
+				}
+
+				&.menu {
+
+					text-align: right;
+				
+					li {
+						
+						display: inline-block;
+						width: inherit;
+
+
+						a:link, a:visited {
+							padding: $defaultMargin / 2 $defaultMargin * 1.5;
+							color: $darkBaseColor;
+							display: block; 
+							width: 100%;
+							font-size: $defaultFontSize;
+						}
+
+						a:hover, a:visited {
+							background: lighten($darkBaseColor, 55%);
+						}
+
+						&.is-active {
+							font-weight: bold;
+
+							a:link, a:visited {
+								color: $primaryColor;
+							}
+						}
+						
+					}
+
+				}
+
+			}
+
+		}
+
+		.skip {
+
+				display: none;
+		}
+
+		&.sticky {
+			position: fixed;
+			width: 100%;
+			max-width: none;
+			background: $white;
+			top: 0;
+			left: 0;
+			z-index: 10000;
+			height: $defaultLineHeight * 3 !important;
+			border-bottom: 1px solid $darkBaseColor;
+			@include shadow(5px,5px,10px,$baseColor);
+			padding: $defaultMargin !important;
+
+			.sticky_wrap {
+				max-width: 1200px;
+				margin: auto;
+			}
+
+			#logo {
+				width: 75px;
+			}
+			#navwrap {
+				float: none;
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+
+				#add_menu {
+					display: none;
+				}
+
+				#main_menu {
+					position: relative;
+					right: 0;
+				}
+			}
+
+		}
+	}
+
+}
+
+
+

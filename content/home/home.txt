@@ -1,0 +1,56 @@
+Title: Home
+
+----
+
+Headline: Overpriced hosting
+
+----
+
+Intro: On cheap, old servers
+
+----
+
+Features: 
+
+- 
+  headline: Performance
+  text: >
+    Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula
+    eget dolor.
+  link: '#'
+- 
+  headline: Servers
+  text: >
+    Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula
+    eget dolor.
+  link: '#'
+- 
+  headline: Simple Something
+  text: >
+    Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula
+    eget dolor.
+  link: '#'
+- 
+  headline: Teams
+  text: >
+    Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula
+    eget dolor.
+  link: '#'
+- 
+  headline: Blockchain
+  text: >
+    Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula
+    eget dolor.
+  link: '#'
+- 
+  headline: BuzzyBuzzwords
+  text: >
+    Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula
+    eget dolor.
+  link: '#'

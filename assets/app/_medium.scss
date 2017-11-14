@@ -1,0 +1,180 @@
+
+@media screen and (min-width: $widthMedium) {
+
+.branding {
+	float: left;
+}
+
+#banner {
+	margin: $defaultMargin 0;
+	padding: 0;
+
+	.default &, .contact & {
+		padding: $defaultMargin;
+	}
+	.home & {
+		background: $baseColor;
+		height: 400px;
+
+		img {
+			height: 400px;
+		}
+	}
+}
+
+
+main {
+
+	.box {
+		padding: 34px;
+		
+		&.focus {
+
+			div {
+				background: $lightBaseColor;
+				padding: $defaultMargin * 2;
+			}
+
+		}
+		
+	}
+
+	#bigblue {
+		
+		background: #dcecfb;
+		padding: 0;
+
+		.col {
+			width: 100%;
+			float: none;
+
+			ul {
+				-webkit-column-count: 2;
+				-webkit-column-gap: $defaultMargin; 
+				-moz-column-count: 2;
+				-moz-column-gap: $defaultMargin;  
+				column-count: 2;
+				column-gap: $defaultMargin; 
+			}
+		}
+
+		li {
+			font-style: italic;
+			color: $primaryColor;
+		}
+
+		img {
+			width: auto;
+		}
+
+		h2 {
+			padding-top: $defaultMargin;
+		}
+	}
+
+	.pagelink {
+
+		border-top: 1px solid $primaryColor;
+		border-bottom: 1px solid $primaryColor;
+		padding: $defaultMargin 0;
+		font-weight: bold;
+		display: block;
+	}
+
+	.cta {
+
+		p {
+		
+			&:first-child {
+				font-size: $defaultFontSize * 1.5;
+			}
+		} 
+
+		.cta {
+			width: 300px;
+		}
+	}
+
+	.contacts {
+
+		.contact-item-wrap {
+
+			.contact-item {
+
+				background: lighten($baseColor,30%);
+				
+				figure {
+					width: 50%;
+					float: left;
+					padding-right: $defaultMargin;
+				}
+
+				div {
+					padding: $defaultMargin 0;
+				}
+
+			}			
+		}
+
+	}	
+}
+
+
+
+// COLUMNS + GRIDS
+
+.column, .col {
+
+	&.medium-2 {
+		width: 16.66667%;
+	}
+	&.medium-3 {
+		width: 25%;
+	}
+	&.medium-4 {
+		width: 33.33334%;
+	} 
+	&.medium-5 {
+		width: 41.667%;
+	}
+	&.medium-6 {
+		width: 50%;
+	}
+	&.medium-7 {
+		width: 58.3334%;
+	}
+	&.medium-8 {
+		width: 66.66667%;
+	}
+	&.medium-9 {
+		width: 75%;
+	}
+}
+
+figure {
+	.columns-2 & {
+		width: 50%;
+		float: left;
+		padding: $defaultMargin / 2;
+	}
+	.columns-3 & {
+		width: 33.3334%;
+		float: left;
+		padding: $defaultMargin / 2;
+	}
+	.columns-4 & {
+		float: left;	
+		width: 25%;
+		padding: $defaultMargin / 2;
+	}
+	.columns-5 & {
+		width: 20%;
+		float: left;
+		padding: $defaultMargin / 2;
+	}
+}
+
+}
+
+
+
