@@ -135,7 +135,7 @@ nav#header_nav {
 
 
 
-@media screen and (min-width: $widthMediumPlus) {
+@media screen and (min-width: $lg) {
 
 	header {
 
@@ -262,44 +262,7 @@ nav#header_nav {
 				display: none;
 		}
 
-		&.sticky {
-			position: fixed;
-			width: 100%;
-			max-width: none;
-			background: $white;
-			top: 0;
-			left: 0;
-			z-index: 10000;
-			height: $defaultLineHeight * 3 !important;
-			border-bottom: 1px solid $darkBaseColor;
-			@include shadow(5px,5px,10px,$baseColor);
-			padding: $defaultMargin !important;
 
-			.sticky_wrap {
-				max-width: 1200px;
-				margin: auto;
-			}
-
-			#logo {
-				width: 75px;
-			}
-			#navwrap {
-				float: none;
-				max-width: 100%;
-				width: 100%;
-				height: auto;
-
-				#add_menu {
-					display: none;
-				}
-
-				#main_menu {
-					position: relative;
-					right: 0;
-				}
-			}
-
-		}
 	}
 
 }

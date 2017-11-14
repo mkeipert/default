@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="<?= site()->language() ? site()->language()->code() : 'en' ?>">
+
 <head>
 
     <meta charset="utf-8">
@@ -8,6 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
+
     <?php if ($page->description()=="") : ?>
         <meta name="description" content="<?= $site->description()->html() ?>" />
     <?php else : ?>
@@ -17,7 +19,6 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700" rel="stylesheet">
 
     <?= css('assets/font-awesome/css/font-awesome.min.css') ?>
-    <?= css('assets/magnific-popup/magnific-popup.css') ?>
     <?= css('assets/css/base.css') ?>
 
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo kirby()->urls()->assets() ?>/icons/apple-icon-57x57.png">
@@ -38,10 +39,10 @@
     <meta name="msapplication-TileImage" content="<?php echo kirby()->urls()->assets() ?>/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-
     <?= js('assets/js/vendor/modernizr-2.8.3.min.js') ?>
 
 </head>
+
 <body class="<?= $page->template() ?>">
     
     <!--[if lt IE 10]>
@@ -49,46 +50,15 @@
     <![endif]-->
 
     <div id="page">
-        <div id="barwrap">
-            <div id="bar"></div>
-        </div>
+        
+        <header class="header">
+            <div class="container">
+                <a class="logo" href="<?= url() ?>"><?= $site->title()->html() ?></a>
+    
+            <?php snippet('menu') ?>      
 
-        <div id="header_wrap">
-            <header id="header" class="container">
-                <div class="sticky_wrap">
-                    <div class="branding">
-                        <a href="<?= url() ?>" rel="home" id="logo"><?= $site->title()->html() ?></a>
-                    </div>
-                    <div id="navwrap">
-                        <h1 class="mobile-header hide-on-medium-plus">fm control</h1>
-                        <a class="skip hide-on-medium-plus" href="#menu">
-                            <button class="lines-button x" type="button" role="button" aria-label="Toggle Navigation">
-                                <span class="lines"></span>
-                            </button>
-                        </a>
-                        <nav id="header_nav">
-                            <?php snippet('menu') ?>
-                            <?php snippet('additional_menu') ?>
-                        </nav>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <div id="sticky_space"></div>
-       
-        <?php if ($page->isHomePage()) : ?>
-            <div id="banner">
-                <div class="container">
-                    <img src="<?php echo kirby()->urls()->assets() ?>/images/fm-control-start.jpg" />
-                    <?php echo $page->bannertext()->kirbytext() ?>
-                </div>
             </div>
-        <?php else : ?>
-            <div id="banner">
-                <div class="container">
-                    <?php echo $page->intro()->kirbytext() ?>
-                </div>
-            </div>
-        <?php endif ?>
+        </header>
+
         
 

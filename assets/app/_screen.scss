@@ -2,6 +2,15 @@ html, body, #page {
 	height: 100%;
 }
 
+#logo {
+    text-indent: -100000px;
+    background: url(../images/logo.png) center top no-repeat;
+    width: 160px;
+    height: 120px;
+    background-size: contain;
+    display: none;
+}
+
 #page {
 
 	#barwrap {
@@ -40,94 +49,6 @@ html, body, #page {
 	}
 }
 
-#header {
-	width: 100%;
-}
-#banner {
-	width: 100%;
-	overflow: hidden;
-	padding: $defaultMargin * 2 0 0 0;
-	
-	.home & {
-		background: $primaryColor;
-		height: 100%;
-
-		@media screen and (min-width: $widthSmall) {
-			height: auto;
-			background: $baseColor;
-		}
-	}
-	.container {
-		padding: 0 $defaultMargin;
-		overflow: visible;
-
-		img {
-			margin-left: -250px;
-		}
-	}
-
-	img {
-		height: 300px;
-		width: auto;
-	}
-
-	.default &, .contact & {
-		background: #dcecfb;
-		color: $lightPrimaryColor;
-		padding: $defaultMargin * 3 $defaultMargin $defaultMargin $defaultMargin;
-
-		@media screen and (min-width: $widthLarge) {
-			min-height: 300px;
-		}
-
-	}
-
-}
-
-main {
-	
-	padding-top: $defaultMargin;
-	
-	article {
-		margin-bottom: $defaultMargin *4;
-	}
-
-	.cta {
-
-		p {
-			font-weight: bold;
-			color: $primaryColor;
-			line-height: 1;
-			margin-bottom: 0;
-
-			&:first-child {
-				color: $white;
-
-			}
-		} 
-
-		.cta {
-			@include shadow(6px, 6px, 2px, lighten($baseColor, 20%));
-		}
-	}
-	
-	.item {
-		border-top: 2px solid $primaryColor;
-		padding: $defaultMargin;
-	}
-
-}
-
-footer {
-	background: $baseColor;
-	color: $white;
-	padding: $defaultMargin 0;
-	font-size: $defaultFontSize * 0.8;
-	* {
-		color: white !important;
-	}
-}
-
 
 #mobile-header {
 	position: fixed;
@@ -138,6 +59,7 @@ footer {
 	padding: $defaultMargin;
 	background: $white;
 	height: $defaultMargin * 4;
+	
 	#logo {
 		width: 150px;
 		display: block;

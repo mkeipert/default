@@ -1,27 +1,41 @@
-$widthSmall:		480px;
-$widthMedium:		768px;
-$widthMediumPlus: 	1024px;
-$widthLarge:		1140px;
+// BREAKPOINTS
+
+$xsm:				320px;
+$sm:				480px;
+$md:				768px;
+$lg: 				1024px;
+$xlg:				1260px;
+
+// COLORS 
 
 $baseColor: 		#98979c;
 $darkBaseColor: 	#676767;
 $lightBaseColor:	#e8e8e8;
 $primaryColor: 		#003c76;
+$darkPrimaryColor:	#003c76;
 $lightPrimaryColor:	#66a4d0;
 $secondaryColor:	#88c3ec;
+$darkSecondaryColor: #116EA9;
 $lightSecondaryColor: #116EA9;
 $linkColor: 		$primaryColor;
 $linkHoverColor:	lighten($linkColor, 20%);
+$linkActiveColor: 	darken($linkColor, 20%);
 $white: 			white;
 $backgroundColor:	$white;
 
-$defaultFontSize:	18px;
-$defaultLineHeight:	1.4em;
+// FONTS
+
 $defaultFontFamily: 'Source Sans Pro', sans-serif;
 $secondaryFontFamily: 'Source Sans Pro', sans-serif;
+$defaultFontSize:	18px;
+$defaultLineHeight:	1.4em;
 $defaultLetterSpacing: 0em;
+
+// MARGINS & SIZES
+
 $defaultMargin: 	1rem;
 $defaultWidth: 		1200px;
-
 $button-size: 		2rem;
-$transition:		.5s;
+
+// DIVERS
+
